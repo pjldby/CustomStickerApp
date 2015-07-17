@@ -4,17 +4,9 @@
     <meta charset="utf-8">
     <title>Custom Sticker App</title>
     <link href='css/desktop-style.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Tangerine|Oswald|Exo+2|Open+Sans' rel='stylesheet' type='text/css'>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js'></script>
     <script src='js/CustomStickerApp.js'></script>
-    <script type="text/javascript">
-      function changeFontSize(vol)
-      {
-        vol=vol+'px';
-        sticker.style.fontSize=vol;
-      }
-    </script>
   </head>
   <body data-ng-controller='CustomStickerController'>
       <div class="left-div">
@@ -22,42 +14,56 @@
 
         <ul class="details-ul">
 
+          <!-- STICKER TEXT -->
           <li class="details-li"><input type="text" autofocus placeholder="Sticker Text" class="details" data-ng-model="stickerText"></li>
-<!--
-NOT WORKING
+
+          <!--STICKER TEXT FONT-->
           <li class="details-li">
             <ul class="chooser-ul">
-              <li class="chooser-li" data-ng-model='fontA' data-ng-click="customText{'font-family': 'Exo 2'}">Aa</li>
-              <li class="chooser-li" data-ng-model='fontB' data-ng-click="customText{'font-family': 'Exo 2'}">Aa</li>
-              <li class="chooser-li" data-ng-model='fontC' data-ng-click="customText{'font-family': 'Exo 2'}">Aa</li>
-              <li class="chooser-li" data-ng-model='fontD' data-ng-click="customText{'font-family': 'Exo 2'}">Aa</li>
+              <li class="font-li fontA" data-ng-model='fontA' data-ng-click="customText={'font-family': 'Exo 2'}">Aa</li>
+              <li class="font-li fontB" data-ng-model='fontB' data-ng-click="customText={'font-family': 'Open Sans'}">Aa</li>
+              <li class="font-li fontC" data-ng-model='fontC' data-ng-click="customText={'font-family': 'Oswald'}">Aa</li>
+              <li class="font-li fontD" data-ng-model='fontD' data-ng-click="customText={'font-family': 'Tangerine'}">Aa</li>
             </ul>
           </li>
--->
+
+          <!-- TEXT COLOR -->
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="propertyHeading">Text Color</li>
-              <li class="chooser-li Black" data-ng-click="customText={color: '#2e2e2e'}"></li>
-              <li class="chooser-li White" data-ng-click="customText={color: '#fff'}"></li>
-              <li class="chooser-li Blue" data-ng-click="customText={color: '#495ebb'}"></li>
-              <li class="chooser-li Green" data-ng-click="customText={color: '#5db343'}"></li>
+              <li class="chooser-li black" data-ng-click="customText={color: '#2e2e2e'}"></li>
+              <li class="chooser-li white" data-ng-click="customText={color: '#fff'}"></li>
+              <li class="chooser-li blue" data-ng-click="customText={color: '#495ebb'}"></li>
+              <li class="chooser-li green" data-ng-click="customText={color: '#5db343'}"></li>
+              <li class="chooser-li orange" data-ng-click="customText={color: '#ffb819'}"></li>
+              <li class="chooser-li red" data-ng-click="customText={color: '#d01616'}"></li>
             </ul>
           </li>
 
+          <!-- STICKER BACKGROUND -->
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="propertyHeading">Sticker Background</li>
-              <li class="chooser-li Black" data-ng-click="stickerDiv={background: '#2e2e2e'}"></li>
-              <li class="chooser-li White" data-ng-click="stickerDiv={background: '#fff'}"></li>
-              <li class="chooser-li Blue" data-ng-click="stickerDiv={background: '#495ebb'}"></li>
-              <li class="chooser-li Green" data-ng-click="stickerDiv={background: '#5db343'}"></li>
+              <li class="chooser-li black" data-ng-click="stickerDiv={background: '#2e2e2e'}"></li>
+              <li class="chooser-li white" data-ng-click="stickerDiv={background: '#fff'}"></li>
+              <li class="chooser-li blue" data-ng-click="stickerDiv={background: '#495ebb'}"></li>
+              <li class="chooser-li green" data-ng-click="stickerDiv={background: '#5db343'}"></li>
+              <li class="chooser-li orange" data-ng-click="stickerDiv={background: '#ffb819'}"></li>
+              <li class="chooser-li red" data-ng-click="stickerDiv={background: '#d01616'}"></li>
+              <li class="chooser-li back1" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back1.jpg)'}"></li>
+              <li class="chooser-li back2" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back2.jpg)'}"></li>
+              <li class="chooser-li back3" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back3.jpg)'}"></li>
+              <li class="chooser-li back4" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back4.jpg)'}"></li>
             </ul>
           </li>
+
+          <!-- TEXT SIZE -->
           <li class="propertyHeading">Text Size</li>
           <li class="details-li">
-            <input type='range' min="48" max="128" step="16" class='font-range' value='48' oninput="changeFontSize(value)"/>
+            <input type='range' min="48" max="96" step="16" class='font-range' value='48' oninput="changeFontSize(value)"/>
           </li>
 
+          <!-- BUTTONS -->
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="button-li"><input type="button" value="Place Order" class="buttons" id='placeorder'></li>
@@ -68,6 +74,7 @@ NOT WORKING
         </ul>
       </div>
 
+      <!-- STICKER PREVIEW -->
       <div class="right-div">
         <div class="heading-div">Preview</div>
         <div class="sticker-parent-div">
