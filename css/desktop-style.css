@@ -4,7 +4,10 @@ html,body,div,a,ul,li,span
   padding: 0%;
   margin: 0%;
 }
-
+body
+{
+  min-width: 760px;
+}
 .left-div,.right-div
 {
   height: 100vh;
@@ -58,17 +61,50 @@ html,body,div,a,ul,li,span
   width: 50%;
 }
 
+/* STICKER TEXT FONT */
+.fontA
+{
+  font-family: 'Exo 2', sans-serif;
+}
+
+.fontB
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fontC
+{
+  font-family: 'Oswald', sans-serif;
+}
+
+.fontD
+{
+  font-family: 'Tangerine', cursive;
+}
+
+
 /* COLOR CHOOSER */
 .details-ul
 {
   list-style: none;
   background: #fff;
   width: 80%;
-  margin: 5% auto;
+  margin: 1% auto;
   padding: 2%;
   border: 1px solid #cfcfcf;
   border-radius: 3px;
   box-shadow: 0 5px 5px -4px #bbb;
+}
+
+.font-li
+{
+  font-size: 32px;
+  display: inline-block;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  cursor: pointer;
 }
 .details-li
 {
@@ -82,8 +118,8 @@ html,body,div,a,ul,li,span
 {
   border: 1px solid #cfcfcf;
   display: inline-block;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
   margin-top: 2%;
   margin-bottom: 5%;
   margin-left: 2%;
@@ -121,24 +157,51 @@ html,body,div,a,ul,li,span
   background: #ff7503;
 }
 
-.Black
+.black
 {
   background: #2e2e2e;
 }
 
-.White
+.white
 {
   background: #fff;
 }
 
-.Green
+.green
 {
   background: #5db343;
 }
 
-.Blue
+.blue
 {
   background: #495ebb;
+}
+
+.orange
+{
+  background: #ffb819;
+}
+
+.red
+{
+  background: #d01616;
+}
+
+.back1
+{
+  background: url(../backgrounds/preview/back1.jpg) no-repeat;
+}
+.back2
+{
+  background: url(../backgrounds/preview/back2.jpg) no-repeat;
+}
+.back3
+{
+  background: url(../backgrounds/preview/back3.jpg) no-repeat;
+}
+.back4
+{
+  background: url(../backgrounds/preview/back4.jpg) no-repeat;
 }
 
 /* RANGE STYLING*/
@@ -166,7 +229,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: goldenrod;
+    background: #d01616;
     margin-top: -4px;
 }
 input[type=range]:focus {
@@ -188,7 +251,7 @@ input[type=range]::-moz-range-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: goldenrod;
+    background: #d01616;
 }
 
 /*hide the outline behind the border*/
@@ -200,15 +263,9 @@ input[type=range]:-moz-focusring{
 input[type=range]::-ms-track {
     width: 300px;
     height: 5px;
-
-    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
     background: transparent;
-
-    /*leave room for the larger thumb to overflow with a transparent border */
     border-color: transparent;
     border-width: 6px 0;
-
-    /*remove default tick marks*/
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
@@ -224,7 +281,7 @@ input[type=range]::-ms-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: goldenrod;
+    background: #d01616;
 }
 input[type=range]:focus::-ms-fill-lower {
     background: #888;
