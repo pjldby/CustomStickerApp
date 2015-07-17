@@ -1,0 +1,234 @@
+/* BASIC RESETS */
+html,body,div,a,ul,li,span
+{
+  padding: 0%;
+  margin: 0%;
+}
+
+.left-div,.right-div
+{
+  height: 100vh;
+  text-align: center;
+  width: 50%;
+}
+.heading-div
+{
+  font-size: 1.5em;
+  margin-top: 2%;
+  font-family: 'Exo 2', sans-serif;
+}
+/* RIGHT DIV */
+.right-div
+{
+  float: right;
+  background: #fff;
+}
+.sticker-parent-div
+{
+  text-align: center;
+  margin: 2% auto;
+  display: table;
+  height: 30vh;
+}
+.sticker-div
+{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 48px;
+  width: 80%;
+  font-family: 'Exo 2', sans-serif;
+  margin: 10% auto;
+  text-align: center;
+}
+
+/* LEFT DIV*/
+.left-div
+{
+  float:left;
+  background: #e8e8e8;
+}
+
+/* DETAILS */
+.details
+{
+  padding: 1%;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #cfcfcf;
+  margin: 2% auto;
+  width: 50%;
+}
+
+/* COLOR CHOOSER */
+.details-ul
+{
+  list-style: none;
+  background: #fff;
+  width: 80%;
+  margin: 5% auto;
+  padding: 2%;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px -4px #bbb;
+}
+.details-li
+{
+  display: block;
+}
+.chooser-ul
+{
+  list-style: none;
+}
+.chooser-li
+{
+  border: 1px solid #cfcfcf;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+.propertyHeading
+{
+  margin-top: 2%;
+  color: #585858;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+  display: block;
+}
+
+.button-li
+{
+  margin-top: 10%;
+}
+.buttons
+{
+  border-radius: 3px;
+  padding: 1%;
+  font-family: 'Exo 2', sans-serif;
+}
+.buttons:hover
+{
+  cursor: pointer;
+}
+#placeorder
+{
+  border: 1px solid #ff7503;
+  color: #fff;
+  background: #ff7503;
+}
+
+.Black
+{
+  background: #2e2e2e;
+}
+
+.White
+{
+  background: #fff;
+}
+
+.Green
+{
+  background: #5db343;
+}
+
+.Blue
+{
+  background: #495ebb;
+}
+
+/* RANGE STYLING*/
+
+input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 50%;
+}
+
+input[type=range]:hover {
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
