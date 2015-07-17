@@ -116,7 +116,7 @@ body
 }
 .chooser-li
 {
-  border: 1px solid #cfcfcf;
+  border: 1px solid #ebe7e7;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -153,8 +153,8 @@ body
 #placeorder
 {
   border: 1px solid #ff7503;
-  color: #fff;
-  background: #ff7503;
+  color: #ff7503;
+  background: #fff;
 }
 
 .black
