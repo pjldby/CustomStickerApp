@@ -15,15 +15,15 @@
         <ul class="details-ul">
 
           <!-- STICKER TEXT -->
-          <li class="details-li"><input type="text" autofocus placeholder="Sticker Text" class="details" data-ng-model="stickerText"></li>
+          <li class="details-li"><input type="text" autofocus placeholder="Sticker Text" class="details" data-ng-model="stickerText"/></li>
 
           <!--STICKER TEXT FONT-->
           <li class="details-li">
             <ul class="chooser-ul">
-              <li class="font-li fontA" data-ng-model='fontA' data-ng-click="customText={'font-family': 'Exo 2'}">Aa</li>
-              <li class="font-li fontB" data-ng-model='fontB' data-ng-click="customText={'font-family': 'Open Sans'}">Aa</li>
-              <li class="font-li fontC" data-ng-model='fontC' data-ng-click="customText={'font-family': 'Oswald'}">Aa</li>
-              <li class="font-li fontD" data-ng-model='fontD' data-ng-click="customText={'font-family': 'Tangerine'}">Aa</li>
+              <li class="font-li fontA" data-ng-model='fontA' data-ng-click="changeFontFamily('A')">Aa</li>
+              <li class="font-li fontB" data-ng-model='fontB' data-ng-click="changeFontFamily('B')">Aa</li>
+              <li class="font-li fontC" data-ng-model='fontC' data-ng-click="changeFontFamily('C')">Aa</li>
+              <li class="font-li fontD" data-ng-model='fontD' data-ng-click="changeFontFamily('D')">Aa</li>
             </ul>
           </li>
 
@@ -31,12 +31,12 @@
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="propertyHeading">Text Color</li>
-              <li class="chooser-li black" data-ng-click="customText={color: '#2e2e2e'}"></li>
-              <li class="chooser-li white" data-ng-click="customText={color: '#fff'}"></li>
-              <li class="chooser-li blue" data-ng-click="customText={color: '#495ebb'}"></li>
-              <li class="chooser-li green" data-ng-click="customText={color: '#5db343'}"></li>
-              <li class="chooser-li orange" data-ng-click="customText={color: '#ffb819'}"></li>
-              <li class="chooser-li red" data-ng-click="customText={color: '#d01616'}"></li>
+              <li class="chooser-li black" data-ng-click="changeFontColor('black')"></li>
+              <li class="chooser-li white" data-ng-click="changeFontColor('white')"></li>
+              <li class="chooser-li blue" data-ng-click="changeFontColor('blue')"></li>
+              <li class="chooser-li green" data-ng-click="changeFontColor('green')"></li>
+              <li class="chooser-li orange" data-ng-click="changeFontColor('orange')"></li>
+              <li class="chooser-li red" data-ng-click="changeFontColor('red')"></li>
             </ul>
           </li>
 
@@ -44,16 +44,16 @@
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="propertyHeading">Sticker Background</li>
-              <li class="chooser-li black" data-ng-click="stickerDiv={background: '#2e2e2e'}"></li>
-              <li class="chooser-li white" data-ng-click="stickerDiv={background: '#fff'}"></li>
-              <li class="chooser-li blue" data-ng-click="stickerDiv={background: '#495ebb'}"></li>
-              <li class="chooser-li green" data-ng-click="stickerDiv={background: '#5db343'}"></li>
-              <li class="chooser-li orange" data-ng-click="stickerDiv={background: '#ffb819'}"></li>
-              <li class="chooser-li red" data-ng-click="stickerDiv={background: '#d01616'}"></li>
-              <li class="chooser-li back1" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back1.jpg)'}"></li>
-              <li class="chooser-li back2" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back2.jpg)'}"></li>
-              <li class="chooser-li back3" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back3.jpg)'}"></li>
-              <li class="chooser-li back4" data-ng-click="stickerDiv={background: 'url(backgrounds/actual/back4.jpg)'}"></li>
+              <li class="chooser-li black" data-ng-click="changeBackground('black')"></li>
+              <li class="chooser-li white" data-ng-click="changeBackground('white')"></li>
+              <li class="chooser-li blue" data-ng-click="changeBackground('blue')"></li>
+              <li class="chooser-li green" data-ng-click="changeBackground('green')"></li>
+              <li class="chooser-li orange" data-ng-click="changeBackground('orange')"></li>
+              <li class="chooser-li red" data-ng-click="changeBackground('red')"></li>
+              <li class="chooser-li back1" data-ng-click="changeBackground('back1')"></li>
+              <li class="chooser-li back2" data-ng-click="changeBackground('back2')"></li>
+              <li class="chooser-li back3" data-ng-click="changeBackground('back3')"></li>
+              <li class="chooser-li back4" data-ng-click="changeBackground('back4')"></li>
             </ul>
           </li>
 
@@ -67,10 +67,9 @@
           <li class="details-li">
             <ul class="chooser-ul">
               <li class="button-li"><input type="button" value="Place Order" class="buttons" id='placeorder'></li>
-              <!--<li class="chooser-li"><input type="button" data-ng-click="stickerDiv={}" value="Reset"></li>-->
+              <!--<li class="button-li"><input type="button" data-ng-click="stickerDiv={}" value="Reset"></li>-->
             </ul>
           </li>
-
         </ul>
       </div>
 
@@ -78,7 +77,7 @@
       <div class="right-div">
         <div class="heading-div">Preview</div>
           <div class="sticker-parent-div">
-            <div class="sticker-div" data-ng-style="stickerDiv"><span data-ng-style="customText" id='sticker'>{{stickerText}}</span></div>
+            <div class="sticker-div" data-ng-style="stickerDiv"><span data-ng-style="customText" id="sticker">{{stickerText}}</span></div>
           </div>
       </div><!-- right div ends-->
   </body>
