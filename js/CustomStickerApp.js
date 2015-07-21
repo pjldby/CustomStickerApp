@@ -1,7 +1,6 @@
 //CHANGING FONT SIZE
 function changeFontSize(size)
 {
-  console.log(size);
   size=size+'px';
   sticker.style.fontSize=size;
 }
@@ -27,7 +26,7 @@ CustomStickerApp.controller('CustomStickerController', function($scope){
          break;
 
        case 'D':
-         $scope.customText={'font-family': 'Tangerine'};
+         $scope.customText={'font-family': 'Damion'};
          break;
 
       default:
