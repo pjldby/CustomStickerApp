@@ -98,19 +98,19 @@ CustomStickerApp.controller('CustomStickerController', function($scope){
         break;
 
       case 'back1':
-        $scope.stickerDiv={background : 'url(backgrounds/actual/back1.jpg)'};
+        $scope.stickerDiv={background : 'url(backgrounds/back1.jpg)'};
         break;
 
       case 'back2':
-        $scope.stickerDiv={background : 'url(backgrounds/actual/back2.jpg)'};
+        $scope.stickerDiv={background : 'url(backgrounds/back2.jpg)'};
         break;
 
       case 'back3':
-        $scope.stickerDiv={background : 'url(backgrounds/actual/back3.jpg)'};
+        $scope.stickerDiv={background : 'url(backgrounds/back3.jpg)'};
         break;
 
       case 'back4':
-        $scope.stickerDiv={background : 'url(backgrounds/actual/back4.jpg)'};
+        $scope.stickerDiv={background : 'url(backgrounds/back4.jpg)'};
         break;
 
       default:
